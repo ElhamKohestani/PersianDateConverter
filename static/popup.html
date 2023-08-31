@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <style>
+    .btn {
+      width: 50%;
+    }
+
+    .tbx {
+      border: 2px solid #aaa;
+      border-radius: 2px;
+      margin: 2px;
+      outline: none;
+      padding: 4px;
+      box-sizing: border-box;
+      transition: .3s;
+      display: block;
+    }
+
+    .tbx:focus {
+      border-color: dodgerblue;
+      box-shadow: 0 0 4px 0 dodgerblue;
+    }
+
+    .fw {
+      width: 100%;
+    }
+
+    .right {
+      text-align: right;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div class="right">
+   
+    <div id="jalaaliForm">
+      <label for="tbxJalaaliYear">سال</label>
+      <input type="number" id="tbxJalaaliYear" class="tbx right" required />
+
+      <br />
+      <label for="ddlJalaaliMonth">ماه</label>
+      <select id="ddlJalaaliMonth" class="fw tbx right">
+        <option value="1">فروردین |حمل</option>
+        <option value="2">اردیبهشت |ثور</option>
+        <option value="3">خرداد |جوزا</option>
+        <option value="4">تیر |سرطان</option>
+        <option value="5">مرداد |اسد</option>
+        <option value="6"> شهریور |سنبله</option>
+        <option value="7">مهر |میزان</option>
+        <option value="8">آبان |عقرب</option>
+        <option value="9">آذر |قوس</option>
+        <option value="10">دی |جدی</option>
+        <option value="11">بهمن |دلو</option>
+        <option value="12">اسفند |حوت</option>
+      </select>
+
+      <br />
+      <label for="tbxJalaaliDay">روز</label>
+      <input type="text" id="tbxJalaaliDay" class="tbx right" required type="number" />
+
+      <br />
+      <button  class="btn" id="btnShamsiConvert">تبدیل</button>
+   
+
+    </div>
+  </div>
+  <br />
+  <hr style="border-top: dotted 1px;" />
+  <div>
+
+   <div id="gregorianForm">
+      <label>Year</label>
+      <input type="number" id="tbxGregorianYear" class="tbx" required type="number" />
+      <br />
+
+
+      <label>Month</label>
+      <select id="ddlGregorianMonth" class="fw tbx">
+        <option value="1">January</option>
+        <option value="2">February</option>
+        <option value="3">March</option>
+        <option value="4">April</option>
+        <option value="5">May</option>
+        <option value="6">June</option>
+        <option value="7">July</option>
+        <option value="8">August</option>
+        <option value="9">September</option>
+        <option value="10">October</option>
+        <option value="11">November</option>
+        <option value="12">December</option>
+      </select>
+      <br />
+
+      <label>Day</label>
+      <input type="number" id="tbxGregorianDay" class="tbx" required />
+
+
+      <br />
+      <button  class="btn" id="btnGregorianConvert">Convert</button>
+    
+    </div>
+
+
+  </div>
+  <script src="popup.bundle.js"></script>
+</body>
+
+</html>
